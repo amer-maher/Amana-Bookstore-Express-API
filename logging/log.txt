@@ -1,0 +1,5 @@
+::1 - - [07/Oct/2025:16:02:49 +0000] "GET /books/rating HTTP/1.1" 404 28 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 OPR/122.0.0.0"
+::1 - - [07/Oct/2025:16:03:10 +0000] "GET /books/best HTTP/1.1" 404 28 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 OPR/122.0.0.0"
+::1 - - [07/Oct/2025:16:03:11 +0000] "GET /books/best HTTP/1.1" 404 28 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 OPR/122.0.0.0"
+::1 - - [07/Oct/2025:16:03:14 +0000] "GET /books/best HTTP/1.1" 404 28 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 OPR/122.0.0.0"
+::1 - - [07/Oct/2025:16:03:30 +0000] "GET /books/best HTTP/1.1" 200 1711 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 OPR/122.0.0.0"
