@@ -20,7 +20,6 @@ app.get('/books', (req, res) => {
   res.json(allBooks);
 });
 
-/* 🟢 4️⃣  أفضل 10 كتب مقيمة (التقييم × عدد المراجعات) */
 app.get('/books/best', (req, res) => {
   const best10Books = [...allBooks]
     .sort((a, b) => (b.rating * b.reviewCount) - (a.rating * a.reviewCount))
@@ -37,7 +36,7 @@ app.get('/books/:id', (req, res) => {
     : res.status(404).json({ message: 'Book not found' });
 });
 
-/*  */
+
 app.get('/books/range/:start/:end', (req, res) => {
   const { start, end } = req.params;
   const startDate = new Date(start);
@@ -53,10 +52,7 @@ app.get('/books/range/:start/:end', (req, res) => {
     : res.status(404).json({ message: 'No books found in this date range' });
 });
 
-/* -------------------------------------------------------------------------- */
 
-/* -------------------------------------------------------------------------- */
-/* 🟢 5️⃣  الكتب التي تحمل علامة المميز (featured = true) */
 app.get('/books/featured', (req, res) => {
   const featuredBooks = allBooks.filter(b => b.featured === true);
   featuredBooks.length > 0
@@ -64,8 +60,6 @@ app.get('/books/featured', (req, res) => {
     : res.status(404).json({ message: 'No featured books found' });
 });
 
-/* -------------------------------------------------------------------------- */
-/* 🟢 6️⃣  جميع المراجعات الخاصة بكتاب محدد */
 app.get('/books/:id/reviews', (req, res) => {
   const { id } = req.params;
   const book = allBooks.find(b => b.id.toString() === id);
@@ -78,10 +72,7 @@ app.get('/books/:id/reviews', (req, res) => {
     ? res.json(bookReviews)
     : res.status(404).json({ message: 'No reviews found for this book' });
 });
-/* -------------------------------------------------------------------------- */
-/* 🟢 7️⃣  إضافة كتاب جديد إلى المكتبة */
-// middleware to control and log the book data
-//add new book
+
 function acssessControl(req, res, next) {
   if(req.body.roll === "admin"){
     console.log("admin access granted")
@@ -102,8 +93,7 @@ app.post('/books', acssessControl,(req, res) => {
 });
 
 
-/* -------------------------------------------------------------------------- */
-// 🚀 تشغيل السيرفر
+
 app.listen(PORT, () => {
   console.log(`✅ Server is running on http://localhost:${PORT}`);
 });
